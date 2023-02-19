@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Brick/Brick.gd" type="Script" id=1]
 [ext_resource path="res://Assets/bubble.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Ex-03c-Audio-3.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Ex-03c-Audio-5.wav" type="AudioStream" id=4]
 
 [sub_resource type="Curve" id=2]
 _data = [ Vector2( 0.00347423, 0.513514 ), 0.0, 0.0, 0, 0, Vector2( 0.510712, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
@@ -46,3 +48,9 @@ margin_bottom = 15.0
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Brick_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Die_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

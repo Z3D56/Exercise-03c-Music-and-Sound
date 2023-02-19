@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=1]
 [ext_resource path="res://Assets/ballGrey.png" type="Texture" id=2]
 [ext_resource path="res://Assets/ballBlue.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Ex-03c-Audio-5.wav" type="AudioStream" id=4]
 
 [sub_resource type="PhysicsMaterial" id=2]
 friction = 0.0
@@ -31,5 +32,8 @@ modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Die_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_Ball_body_entered"]
